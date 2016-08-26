@@ -25,6 +25,10 @@ public:
     T oldest() {
         return data[(currentIdx + 1) % count];
     }
+
+    void clear() {
+        data = std::vector<T>(count);
+    }
 };
 
 template <class T> class RecentlyUsedCache
@@ -40,5 +44,10 @@ public:
             keysByAge.data.erase(old);
         }
         keysByAge[key] = value;
+    }
+
+    void clear() {
+        data.clear();
+        keysByAge.clear();
     }
 };
