@@ -133,10 +133,6 @@ std::string HTTPSEverywhere::getHTTPSURL(const std::string &urlHost, const std::
         return "";
     }
 
-    if (urlHost.find("m.slashdot.org") != std::string::npos) {
-        return "";  // see https://github.com/brave/browser-ios/issues/104
-    }
-
     std::string fullURL = urlHost + urlPath;
     if (recentlyUsedCache.data.count(fullURL) > 0) {
         return recentlyUsedCache.data[fullURL];
