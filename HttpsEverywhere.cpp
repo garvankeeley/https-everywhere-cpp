@@ -27,6 +27,7 @@ bool HTTPSEverywhere::isLoaded() {
 void HTTPSEverywhere::close() {
     delete db;
     db = nullptr;
+    recentlyUsedCache.clear();
 }
 
 // Returns https url on success, empty string if no redirect
