@@ -7,3 +7,5 @@ This C++ lib works with a converted dataset (to LevelDB) enabling <1ms lookup ti
 Only external lib used is LevelDB, so this should compile on all architectures.
 
 See also: https://github.com/google/leveldb
+
+A LevelDB file for this lib: https://s3.amazonaws.com/https-everywhere-data/5.2/httpse.leveldb.tgz
